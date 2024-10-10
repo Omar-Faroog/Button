@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زر سريع التفاعل</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .custom-button-active {
+            background-color: #18BFFF;
+            color: #fff;
+            border: none;
+            border-bottom: 4px solid #149ADC;
+            border-radius: 15px;
+            padding: 10px 150px;
+            outline: none;
+            cursor: pointer;
+            font-size: 18px; /* إضافة px لوحدة القياس */
+            box-shadow: 0px 4px 0px #149ADC;
+            transition: all 0.1s ease; /* تسريع التفاعل */
+            position: relative;
+            -webkit-tap-highlight-color: transparent; /* منع تأثير الضغط على الأجهزة المحمولة */
+        }
+
+        .custom-button-active:focus {
+            outline: none;
+        }
+
+        .custom-button-active:active {
+            transform: translateY(4px); /* نقل الزر للأسفل عند الضغط */
+            box-shadow: 0px 0px 0px #149ADC; /* إخفاء الظل عند الضغط */
+            border-bottom: 0px solid #149ADC; /* إخفاء الحد السفلي عند الضغط */
+        }
+    </style>
+</head>
+<body>
+
+<button class="custom-button-active" aria-label="الإنتقال">الإنتقال</button> <!-- تحسين الوصولية -->
+
+</body>
+</html>
